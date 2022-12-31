@@ -11,3 +11,5 @@ waitKey:인자로 키보드입력 대기 시간을 저장할 수 있으며인자
 destroyAllWindows():입력이 끝나면 출력된 화면이 사라진다
 
 imwrite():출력한 이미지를 저장하는 함순
+
+Translation: Computer Vison에서 프레임내에서 이미지를 이동하는 것을 Translation이라 한다
