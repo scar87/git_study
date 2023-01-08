@@ -19,15 +19,42 @@
 # cv2.waitKey()
 # cv2.destroyAllWindows()
 
+
+#===========================================
+
+
+# import cv2
+# import numpy as np
+
+# img = np.full((450,450,3), 255, dtype = np.uint8)
+
+# cv2.rectangle(img, (50,50), (150,150), (0,0,255))
+# cv2.rectangle(img, (100,100),(250, 250),(0,255,0),5)
+# cv2.rectangle(img, (200,200),(400,400), (255,0,0),-1) #Blue로 채우기
+
+# cv2.imshow('Rectangle',img)
+# cv2.waitKey()
+# cv2.destroyAllWindows()
+
+
+#===========================================
+
+
 import cv2
 import numpy as np
 
-img = np.full((450,450,3), 255, dtype = np.uint8)
+img =np.full((500,500,3),255, dtype=np.unit8)
 
-cv2.rectangle(img, (50,50), (150,150), (0,0,255))
-cv2.rectangle(img, (100,100),(250, 250),(0,255,0),5)
-cv2.rectangle(img, (200,200),(400,400), (255,0,0),-1) #Blue로 채우기
+poly1 =np.array([[50,50],[200,200]]) #직선
+poly1 =np.array([[[350,50],[250,200],[450,200]]]) #삼각형
+poly1 =np.array([[[50,300],[300,200],[200,450],[50,450]]]) #사각형
+poly1 =np.array([[[350,250],[450,350],[300,450],[250,350]]])#오각형
 
-cv2.imshow('Rectangle',img)
+cv2.polylines(img, [poly1], True, (0,0,225))
+cv2.polylines(img, [poly1], True, (0,255,0))
+cv2.polylines(img, [poly1], True, (225,0,0))
+cv2.polylines(img, [poly1], False, (0,0,0)) #열린형태
+
+cv2.imshow('Polylines',img)
 cv2.waitKey()
 cv2.destroyAllWindows()
