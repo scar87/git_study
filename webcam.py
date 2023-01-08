@@ -17,6 +17,7 @@
 
 #비디오 저장
 import cv2
+
 cap = cv2.VideoCapture(0) #카메라 장치 연결
 form = cv2.VideoWriter_fourcc(*'XVID')
 output = cv2.VideoWriter('output.avi', form, 20.0, (640)) #filename, 인코딩 포맷 문자, fps, frame 크기
@@ -26,7 +27,7 @@ while cap.isOpened():
         print("Can't receive frame")
         break
     output.write(frame) #파일저장
-    cv2, imshow('CAMERA', frame)
+    cv2. imshow('CAMERA', frame)
     if cv2.waitKey(1) == 27:
         break
 output.release() #파일 닫기
