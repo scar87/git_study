@@ -18,3 +18,6 @@ shape는 row, column, channle로 구성
 
 getRotationMatrix2D() : 변환행렬 만들고 회전을하게 만듬
 
+cv2.line() : 이미지에 직선을 그리는함수
+
+cv2.rectangle() : 이미지에 사각형 그리는함수
