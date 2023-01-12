@@ -21,3 +21,8 @@ getRotationMatrix2D() : 변환행렬 만들고 회전을하게 만듬
 cv2.line() : 이미지에 직선을 그리는함수
 
 cv2.rectangle() : 이미지에 사각형 그리는함수
+
+cv2.Polylines() : 이미지에 다각형을 그리는 함수
+
+cv2.circle() : 타원이나 호를 그리는 함수
+
