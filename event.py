@@ -50,7 +50,7 @@
 import cv2
 import numpy as np
 
-img= cv2.imread('image.jpg')
+img= cv2.imread('d:/ws/img/images/image.jpg')
 x,y,w,h =cv2.selectROI('image', img, False)
 
 if w and h:
