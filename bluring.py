@@ -42,3 +42,22 @@ cv2.imshow('kernel1', blur1)
 
 cv2.waitKey()
 cv2.destroyAllWindows()
+
+#----------------모션 블러------------
+import cv2
+import numpy as np
+
+img = cv2.imread('//Users//doyun//ws//img//images//image.jpg')
+row, col = img.shape[:2]
+
+#motion blur
+size = 25
+motion = np.zeros((size,size))
+motion[int((size-1)/2), :] = np.ones(size)
+motion = motion / size
+
+motion_output = cv2.flter2D(img, -1, motion)
+cv2.imshow('motion', motion_output)
+
+cv2.waitKey()
+cv2.destroyAllWindows()
