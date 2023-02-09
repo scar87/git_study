@@ -103,3 +103,16 @@ cv2.imshow('Edge_y', edge_y)
 
 cv2.waitKey()
 cv2.destroyAllWindows()
+
+
+#-----------------라플라시안 필터------------
+import cv2
+import numpy as np
+
+img = cv2.imread('image.jpg')
+
+img = cv2.Laplacian(img, -1)
+
+cv2.imshow('Laplacian', edge)
+cv2.waitKey()
+cv2.destroyAllWindows()
