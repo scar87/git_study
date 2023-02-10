@@ -111,7 +111,7 @@ import numpy as np
 
 img = cv2.imread('image.jpg')
 
-img = cv2.Laplacian(img, -1)
+edge = cv2.Laplacian(img, -1)
 
 cv2.imshow('Laplacian', edge)
 cv2.waitKey()
